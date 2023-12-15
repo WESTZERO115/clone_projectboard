@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판 페이지</title>
+</head>
+
+<body>
+    <header th:replace="header :: header"></header>
+
+    <main>
+<!--    검색창-->
+        <form>
+<!--        검색 필터 5가지-->
+            <label for="search-type" hidden>유형</label>
+            <select id="search-type" name="search-type">
+                <option>제목</option>
+                <option>본문</option>
+                <option>ID</option>
+                <option>닉네임</option>
+                <option>해시태그</option>
+            </select>
+<!--        검색 바-->
+            <label for="search-value" hidden>검색어</label>
+            <input id="search-value" type="search" placeholder="검색어를 입력하세요" name="search-value">
+<!--        검색 버튼-->
+            <button type="submit">검색</button>
+        </form>
+<!--    테이블-->
+        <table>
+            <thead>
+                <tr>
+                    <th>제목</th>
+                    <th>해시태그</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+<!--                여기는 목업 화면을 만든다고 생각하면 된다.-->
+                    <td>첫 글</td>
+                    <td>#java</td>
+                    <td>Zero</td>
+                    <td>2022-01-01</td>
+                </tr>
+                <tr>
+                    <!--                여기는 목업 화면을 만든다고 생각하면 된다.-->
+                    <td>두 번째 글</td>
+                    <td>#spring</td>
+                    <td>Zero</td>
+                    <td>2022-01-02</td>
+                </tr>
+                <tr>
+                    <!--                여기는 목업 화면을 만든다고 생각하면 된다.-->
+                    <td>세 번째 글</td>
+                    <td>#java</td>
+                    <td>Zero</td>
+                    <td>2022-01-03</td>
+                </tr>
+            </tbody>
+        </table>
+<!--    내비게이션 바-->
+        <nav>
+            <table>
+                <tr>
+                    <td>previous</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>next</td>
+                </tr>
+            </table>
+        </nav>
+    </main>
+    <footer th:replace="footer :: footer"></footer>
+</body>
+</html>
