@@ -30,6 +30,7 @@ dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
     // queryDSL 설정
     implementation("com.querydsl:querydsl-jpa")
