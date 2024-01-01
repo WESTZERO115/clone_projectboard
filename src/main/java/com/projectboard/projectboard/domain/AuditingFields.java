@@ -22,9 +22,11 @@ public class AuditingFields {
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     @CreatedDate @Column(nullable = false, updatable = false) private LocalDateTime createdAt;
-    @CreatedBy @Column(nullable = false, updatable = false, length = 100) private String createdBy;
+    @CreatedBy @Column(nullable = false, updatable = false, length = 100)
+    protected String createdBy;
     @LastModifiedDate @Column(nullable = false) private LocalDateTime modifiedAt;
-    @LastModifiedBy @Column(nullable = false, length = 100) private String modifiedBy;
+    @LastModifiedBy @Column(nullable = false, length = 100)
+    protected String modifiedBy;
 }
 // 인덱스 메타데이터는 뽑을 수 없다.
 
